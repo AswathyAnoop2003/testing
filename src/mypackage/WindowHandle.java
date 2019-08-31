@@ -11,9 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WindowHandle {
 
 	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
-		System.setProperty("chromedriver", "C:\\Drivers\\chromedriver_win32_65\\chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver_win32_65\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();	
 		driver.get("https://www.toolsqa.com/automation-practice-switch-windows/");
 		String parent = driver.getWindowHandle();
 		System.out.print(driver.switchTo().window(parent).getTitle());
